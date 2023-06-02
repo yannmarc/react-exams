@@ -1,15 +1,19 @@
-import { BrowserRouter, Route, Router } from 'react-router-dom';
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import './App.css';
 import MyComponent from './components/MyComponent';
+import Form from './components/Form';
+import Dropdown from './components/Dropdown';
 
 function App() {
-  <BrowserRouter>
-    <Router>
-      <Route path='/my-component' element={<MyComponent />} />
-      <Route path="/form" element={<Form />} />
-      <Route path="/drop" element={<Form />} />
-    </Router>
-  </BrowserRouter>
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<MyComponent />} />
+        <Route path='/form' element={<Form />} />
+        <Route path='/dropdown' element={<Dropdown />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
